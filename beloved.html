@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Love between Us</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/beloved.css">
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/112965/45803/5a55ab72f629d917e817dad0.css' rel='stylesheet' type='text/css' />
+	
+	<script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+    <script type="text/javascript" src="./js/heart1.js"></script>
+	<script type="text/javascript" src="./js/heart2.js"></script>
+    <script type="text/javascript" src="./js/heart3.js"></script>
+	<script type="text/javascript" src="./js/heart4.js"></script>
+    <script type="text/javascript" src="./js/heart5.js"></script>
+    <script type="text/javascript" src="./js/days.js"></script>
+</head>
+
+<body>
+    <audio src="./Beautiful In White.mp3" autoplay="true" loop="loop"></audio>
+	<div id="back">
+		<div class="mask"></div>
+		<div id="carousel"  class="carousel slide carousel-fade carousel-position">
+			<div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
+				<div class="item active" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background:url(./img/1.JPG);background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/2.JPG);background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/3.JPG);background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/4.JPG);background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/5.JPG);background-size: cover;"></div>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="modal show" style="left:-70%;top:-5%">
+		<div id="heart1" class="modal-dialog">
+				<div id="loveHeart1">
+					<canvas id="garden1"></canvas>
+				</div>
+		</div>
+	</div>
+	<div class="modal show" style="left:-70%;top:-5%">
+		<div id="heart2" class="modal-dialog">
+				<div id="loveHeart2">
+					<canvas id="garden2"></canvas>
+				</div>
+		</div>
+	</div>
+	<div class="modal show" style="left:-70%;top:-5%">
+		<div id="heart3" class="modal-dialog">
+				<div id="loveHeart3">
+					<canvas id="garden3"></canvas>
+				</div>
+		</div>
+	</div>
+	<div class="modal show" style="left:-70%;top:-5%">
+		<div id="heart4" class="modal-dialog">
+				<div id="loveHeart4">
+					<canvas id="garden4"></canvas>
+				</div>
+		</div>
+	</div><div class="modal show" style="left:-70%;top:-5%">
+		<div id="heart5" class="modal-dialog">
+				<div id="loveHeart5">
+					<canvas id="garden5"></canvas>
+				</div>
+		</div>
+	</div>
+	<div class="modal show" style="top:27%">
+		<div class="modal-dialog" style="opacity: .9">
+			<div class="modal-content" style="opacity:.85">
+                <div class="modal-header">
+                    <h1 class="text-center big-title" >执子之手，与子偕老</h1>
+                    <p class="text-center mid-title">何宇中 & 唐燕</p>
+                    <p class="text-center small-title">我们，是我遇见的最美好的字眼</p>
+                </div>
+                <div class="modal-body text-center" style="line-height: 1.5rem;font-family: 'JournalRegular', Arial, sans-serif;font-size: 3rem;">
+                    <p style="line-height:40px">
+                        <span id="day" class="time-font"></span>
+						<span class="times-font">days&nbsp;</span>
+						<span id="hour" class="time-font"></span>
+						<span class="times-font">hours&nbsp;</span>
+						<span id="minute" class="time-font"></span>
+						<span class="times-font">minutes&nbsp;</span>
+						<span id="second" class="time-font"></span>
+						<span class="times-font">seconds</span>
+                    </p>
+                    <p class="text-center sub-title" id="say"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script type="text/javascript">
+	//设置日期
+	countTime('2015/07/04 14:00', 'day', 'hour', 'minute', 'second');
+	var days = $('#day').text();
+	var D=new Date();  
+	var yy=D.getFullYear();  
+	var mm=D.getMonth()+1;  
+	var dd=D.getDate();  
+	if (yy<100) yy="19"+yy; 
+
+	// 设置标题
+	if(GetLunarDay(yy,mm,dd)=="冬月廿七"){
+		$(document).attr("title", "燕，生日快乐！");
+	} else if(parseInt(mm)==7 && parseInt(dd)==6){
+		$(document).attr("title", "中，生日快乐！");
+	} else if(parseInt(mm)==7 && parseInt(dd)==4){
+		$(document).attr("title", parseInt(yy-2015) + "周年啦！要白头偕老哦！");
+	}else if (parseInt(days / 365) != 0) {
+		$(document).attr("title", "我们在一起" + parseInt(days / 365) + "年啦！");
+	} else if (parseInt(days / 30) != 0) {
+		$(document).attr("title", "我们在一起" + parseInt(days / 30) + "个月啦！");
+	} else
+		$(document).attr("title", "我们在一起" + days + "天啦！");
+
+	//设置每一张图片对应的文字
+	var says = new Array(
+		"福州，西湖公园。你在身边，你就是我最美的西湖",
+		"福州，福大外国语学院。到此一游",
+		"福州，第五大道。爱过这里的披萨，腻了全世界的披萨",
+		"福州，福州大学图书馆。快毕业了才发现学校那么美，如你一般。",
+		"福州，西禅寺。求了几辈子的佛，我们终于在一起了",
+		"福州，福大学生街。一起看到了彩虹，传说，那样会很幸福",
+		"宁德，太姥山。车上的照片也能拍得很美啊",
+		"福州，福大金阁寺。你告诉我那是金阁寺所以我至今不知道它真正叫什么",
+		"福州，EO。你说要减肥，所以我们走进了万科广场的EO",
+		"福州，中亭街。草莓派很甜，我却能大块吃下去，厉害吧",
+		"福州，爱琴海。躲在我后面，我保护你",
+		"福州，爱琴海。我也终于有不进衣服店的理由了！",
+		"福州，爱琴海。和我一样大的熊",
+		"福州，爱琴海。再见了，爱琴海给我们带来快乐的地方",
+		"福州，博士后广场。四年，我们学校的乐园",
+		"福州，豆花新语。终于，我们毕业了，还好我们依然在一起",
+		"厦门，前埔。奶茶与你，很搭哦",
+		"厦门，前埔。躲在墙角偷偷拍照，嘿嘿",
+		"厦门，火车站。发现新天地了",
+		"厦门，五缘湾。五缘湾的夕阳，好美",
+		"惠安，无名街道。好想带你走遍我活了十几年的地方",
+		"厦门，软件园。原来七夕可以这么简单，一幅画，一句情话，幸福",
+		"厦门，软件园。我也开始喜欢上画画了，画很多很多的你",
+		"时间不停，爱你不止，携子之手，白头偕老"
+	);
+	
+	//设置心形
+	var offsetX = $("#loveHeart1").width() / 2;
+	var offsetY = $("#loveHeart1").height() / 2 ;
+	document.createElement('canvas');
+	setTimeout(function(){
+		var a = Math.random()*65;
+		var b = Math.random()*50;
+		heart1.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+		startHeart1Animation();
+		startHeart1Animation();
+		setTimeout(clearHeart1Animation(),6000);
+	},10);
+	setTimeout(function(){
+		
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart2 = document.getElementById("heart2");
+			heart2.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart2Animation();
+			startHeart2Animation();
+			setTimeout(clearHeart2Animation(),6000);
+		
+	},1000);
+	setTimeout(function(){
+		
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart3 = document.getElementById("heart3");
+			heart3.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart3Animation();
+			startHeart3Animation();
+			setTimeout(clearHeart3Animation(),6000);
+		
+	},2000);
+	setTimeout(function(){
+		
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart4 = document.getElementById("heart4");
+			heart4.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart4Animation();
+			startHeart4Animation();
+			setTimeout(clearHeart4Animation(),6000);
+		
+	},3000);
+	setTimeout(function(){
+		
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart5 = document.getElementById("heart5");
+			heart5.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart5Animation();
+			startHeart5Animation();
+			setTimeout(clearHeart5Animation(),6000);
+		
+	},4000);
+	setInterval(function(){
+		var a = Math.random()*65;
+		var b = Math.random()*50;
+		heart1.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+		startHeart1Animation();
+		startHeart1Animation();
+		setTimeout(clearHeart1Animation(),6000);
+	},6000);
+	setTimeout(function(){
+		setInterval(function(){
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart2 = document.getElementById("heart2");
+			heart2.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart2Animation();
+			startHeart2Animation();
+			setTimeout(clearHeart2Animation(),6000);
+		},6000);
+	},1000);
+	setTimeout(function(){
+		setInterval(function(){
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart3 = document.getElementById("heart3");
+			heart3.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart3Animation();
+			startHeart3Animation();
+			setTimeout(clearHeart3Animation(),6000);
+		},6000);
+	},2000);
+	setTimeout(function(){
+		setInterval(function(){
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart4 = document.getElementById("heart4");
+			heart4.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart4Animation();
+			startHeart4Animation();
+			setTimeout(clearHeart4Animation(),6000);
+		},6000);
+	},3000);
+	setTimeout(function(){
+		setInterval(function(){
+			var a = Math.random()*65;
+			var b = Math.random()*50;
+			var heart5 = document.getElementById("heart5");
+			heart5.style.cssText = "top:"+parseInt(a)+"%;left:"+parseInt(b)+"%;";
+			startHeart5Animation();
+			startHeart5Animation();
+			setTimeout(clearHeart5Animation(),6000);
+		},6000);
+	},4000);
+
+	//设置轮播
+	var start = function(){
+		var index = 0;
+		var rate = 6000;
+		$('#say').text(says[(index++) % says.length]);
+		var _play = function () {
+			$('#say').hide();
+			$('#say').text(says[(index++) % says.length]);
+			$('#say').fadeToggle();
+			$('#carousel').carousel('next');
+		};
+		setInterval(_play, rate);
+	}();
+    </script>
+</body>
+
+</html>
