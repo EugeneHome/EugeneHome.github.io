@@ -64,29 +64,31 @@
 
 .big-title{
   color: #A94442;
-  font-family: 'LiDeBiao-Xing3f83cf002e1b945','JournalRegular', Arial, sans-serif;
+  font-family: 'LiDeBiao-Xing3f935fd6391b945','JournalRegular', Arial, sans-serif;
   font-size: 5.5rem;
   line-height:6rem;
 }
 .mid-title {
-  font-family: 'LiDeBiao-Xing3f83cf002e1b945','JournalRegular', Arial, sans-serif;
+  font-family: 'LiDeBiao-Xing3f935fd6391b945','JournalRegular', Arial, sans-serif;
   color: #fff;
   line-height: 2rem;
   font-size: 2.5rem;
 }
 
 .small-title {
-  font-family: 'LiDeBiao-Xing3f83cf002e1b945','JournalRegular', Arial, sans-serif;
+  font-family: 'LiDeBiao-Xing3f935fd6391b945','JournalRegular', Arial, sans-serif;
   color: #fff;
   line-height: 1.5rem;
   font-size: 1.75rem;
 }
 
 .sub-title{
+	font-family: 'LiDeBiao-Xing3f935fd6391b945','JournalRegular', Arial, sans-serif;
 	 color:#A94442;
 	 font-size:2.5rem;
 	 font-weight:bold;
 	 line-height:2.5rem;
+	 white-space:pre;
 }
 .modal-content {
   background: #040404;

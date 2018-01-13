@@ -6,7 +6,7 @@
     <title>Love between Us</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/beloved.css">
-	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/112965/45803/5a55ab72f629d917e817dad0.css' rel='stylesheet' type='text/css' />
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/112965/45803/5a59a790f629d81b8817b763.css' rel='stylesheet' type='text/css' />
 	
 	<script type="text/javascript" src="./js/jquery-1.12.2.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
@@ -91,27 +91,6 @@
 				<div class="item" style="width: 100%;height: 100%;">
 					<div style="width: 100%;height: 100%;background-image: url(./img/22.jpg);background-size: cover;"></div>
 				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/23.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/24.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/25.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/26.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/27.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/28.jpg);background-size: cover;"></div>
-				</div>
-				<div class="item" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background-image: url(./img/29.jpg);background-size: cover;"></div>
-				</div>
 			</div>
 		</div>
     </div>
@@ -149,7 +128,7 @@
 				</div>
 		</div>
 	</div>
-	<div class="modal show" style="top:27%">
+	<div class="modal show" style="top:57%;left:68%">
 		<div class="modal-dialog" style="opacity: .7">
 			<div class="modal-content" style="opacity:1">
                 <div class="modal-header">
@@ -168,7 +147,8 @@
 						<span id="second" class="time-font"></span>
 						<span class="times-font">seconds</span>
                     </p>
-                    <p class="text-center sub-title" id="say"></p>
+                    <p class="text-center sub-title" style="text-align:left" id="say1"></p>
+					<p class="text-center sub-title" style="text-align:right" id="say2"></p>
                 </div>
             </div>
         </div>
@@ -199,36 +179,53 @@
 		$(document).attr("title", "我们在一起" + days + "天啦！");
 
 	//设置每一张图片对应的文字
-	var says = new Array(
-		"1",
-		"2",
-		"3",
-		"4",
-		"5",
-		"6",
-		"7",
-		"8",
-		"9",
-		"10",
-		"11",
-		"12",
-		"13",
-		"14",
-		"15",
-		"16",
-		"17",
-		"18",
-		"19",
-		"20",
-		"21",
-		"22",
-		"23",
-		"24",
-		"25",
-		"26",
-		"27",
-		"28",
-		"29"
+	var says1 = new Array(
+		"  看我小时候多可爱",
+		"  原来你还有这么非主流的时候啊",
+		"  刚进学校的你萌萌哒，哈哈",
+		"  你咋老爱爬树呢",
+		"  两年的时间都没有改变你呢，囧",
+		"  是时候向你们展示姐的无上魅力了",
+		"  校长办公室哎，这么大气和我气质多配",
+		"  我泡了四年的地方，必须要留个念啊",
+		"  对面篮球场好多帅哥啊",
+		"  我可是一个集美貌与智慧于一身的女子",
+		"  哎哟，不错哦，还会弹吉他",
+		"  毕业啦，好开心",
+		"  他们说咱俩照的像结婚照哎",
+		"  第一次出国，吃点东西平复下心情先",
+		"  姐带你看看外面的世界",
+		"  这花好美啊",
+		"  丑媳妇要见公婆啦，好紧张",
+		"  我家这景色还不错吧",
+		"  不是不让你在外边喝酒吗？",
+		"  以后你都要给我吹头发哦",
+		"  新娘子好美啊",
+		"  狗狗送戒指好乖啊"
+	);
+	var says2 = new Array(
+		"那可不，也不看看是谁老婆  ",
+		"哪里非主流了，明明那么可爱  ",
+		"这叫天生丽质难自弃，哼  ",
+		"属猴的，不行啊？  ",
+		"本小姐永远十八岁，不接受一切否定，哼  ",
+		"你是要迷倒万千少男的节奏咩  ",
+		"不愧是要开事务所的女人  ",
+		"学神，请收下我的膝盖    ",
+		"老实交待，是不是偷偷观察我很久了  ",
+		"女王大人，给我等凡人留一条活路吧  ",
+		"姐可是全面发展的呢  ",
+		"童心未泯，好可爱啊  ",
+		"看你那领子，一点都不认真，伐开心  ",
+		"别找借口了，吃货一枚鉴定完毕  ",
+		"发型整整，咱在外头要注意形象  ",
+		"花美人更美  ",
+		"别怕，有我在  ",
+		"等我们老了就天天来这江边散步吧  ",
+		"领导敬酒总要喝点嘛，快来接我啦  ",
+		"遵命，娘娘  ",
+		"你将会是最美的新娘  ",
+		"我会给你一个最浪漫的婚礼  "
 	);
 	
 	//设置心形
@@ -342,13 +339,18 @@
 
 	//设置轮播
 	var start = function(){
-		var index = 0;
+		var index1 = 0;
+		var index2 = 0;
 		var rate = 6000;
-		$('#say').text(says[(index++) % says.length]);
+		$('#say1').text(says1[(index1++) % says1.length]);
+		$('#say2').text(says2[(index2++) % says2.length]);
 		var _play = function () {
-			$('#say').hide();
-			$('#say').text(says[(index++) % says.length]);
-			$('#say').fadeToggle();
+			$('#say1').hide();
+			$('#say2').hide();
+			$('#say1').text(says1[(index1++) % says1.length]);
+			$('#say2').text(says2[(index2++) % says2.length]);
+			$('#say1').fadeToggle();
+			$('#say2').fadeToggle();
 			$('#carousel').carousel('next');
 		};
 		setInterval(_play, rate);
